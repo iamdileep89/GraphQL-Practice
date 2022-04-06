@@ -1,0 +1,40 @@
+{
+  "customers": [
+    {
+      "id": "1",
+      "name": "Doe",
+      "email": "doe@gmail.com",
+      "age": 34
+    },
+    {
+      "id": "2",
+      "name": "Smith",
+      "email": "smith@gmail.com",
+      "age": 35
+    },
+    {
+      "id": "3",
+      "name": "Williams",
+      "email": "williams@gmail.com",
+      "age": 36
+    },
+    {
+      "id": "4",
+      "name": "Charles",
+      "email": "Charles@gmail.com",
+      "age": "50"
+    },
+    {
+      "id": "6",
+      "name": "Niklaus",
+      "email": "Niklaus@gmail.com",
+      "age": 38
+    },
+    {
+      "name": "MithaliRaj",
+      "email": "mithali@gamil.com",
+      "age": "39",
+      "id": "DXj6kuX"
+    }
+  ]
+}

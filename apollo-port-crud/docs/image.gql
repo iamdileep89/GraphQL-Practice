@@ -1,0 +1,7 @@
+mutation IMAGE_UPLOAD($file: Upload!) {
+  imageUploader(file: $file){
+    filename
+    mimetype
+    encoding
+  }
+}

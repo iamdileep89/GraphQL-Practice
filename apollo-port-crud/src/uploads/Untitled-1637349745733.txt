@@ -1,0 +1,6 @@
+title This is a title
+
+New HIP Notification API->API Implementation Logic:HIP Notification Request Payload 
+API Implementation Logic->PartnerLogin PLogin: PII Information to PLogin API from HIP Req Payload
+PartnerLogin PLogin->MongoDB IngFeatures: details.registrant.registrantInfo.clientCode
+MongoDB IngFeatures->API Implementation Logic: Short Brand Name for that clientCode

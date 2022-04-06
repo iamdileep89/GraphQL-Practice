@@ -1,0 +1,92 @@
+# Write your query or mutation here
+
+query GET_POSTS {
+  getAllPosts {
+    id
+    title
+    content
+    featuredImage
+    createdAt
+    updatedAt
+    author {
+      id
+      firstName
+      lastName
+      email
+      username
+      avatarImage
+    }
+  }
+}
+
+query GET_POST_BY_ID($id: ID!){
+  getPostById(id:$id){
+    id
+    title
+    content
+    featuredImage
+    createdAt
+    updatedAt
+  }
+}
+
+mutation CREATE_NEW_POST($title: String!, $content: String!, $featuredImage: String) {
+  createNewPost(
+    newPost: {
+      title: $title
+      content: $content
+      featuredImage: $featuredImage
+    }
+  ) {
+    title
+    content
+    featuredImage
+  }
+}
+
+
+mutation EDIT_POST_BY_ID($id: ID!, $updatedPost: PostInput!) {
+  editPostByID(id: $id, updatedPost: $updatedPost) {
+    id
+    title
+    featuredImage
+    content
+    createdAt
+    updatedAt
+  }
+}
+
+
+mutation DELETE_POST_BY_ID{
+  deletePostByID(id: "6194ca95ca42b8ab5f353ba5"){
+    id
+    success
+    message
+  }
+}
+
+mutation DELETE_POST_BY_ID($id: ID!){
+  deletePostByID(id: $id){
+    id
+    success
+    message
+  }
+}
+
+query GET_POSTS_BY_LIMIT_AND_PAGE{
+  getPostByLimitAndPage(page: 1, limit: 5){
+    paginator {
+      hasPrevPage
+      hasPrevPage
+      prev
+      next
+    }
+    posts {
+      author {
+        username
+      }
+      title
+      content
+    }
+  }
+}

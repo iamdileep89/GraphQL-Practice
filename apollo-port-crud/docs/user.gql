@@ -1,0 +1,46 @@
+mutation REGISTER_NEW_USER {
+  registerUser(
+    newUser: {
+      username: "hello_world5"
+      firstName: "Hello"
+      lastName: "World"
+      email: "hello@world5.com"
+      password: "123456789"
+    }
+  ) {
+    token
+    user {
+      id
+      username
+      email
+      firstName
+      lastName
+    }
+  }
+}
+
+query AUTHENTICATE_USER {
+  authenticateUser(username: "hello_world5", password: "123456789") {
+    user {
+      id
+      username
+      email
+      firstName
+      lastName
+      avatarImage
+    }
+    token
+  }
+}
+
+
+query GET_AUTHENTICATED_USER_PROFILE {
+  authUserProfile {
+    username
+    firstName
+    lastName
+    email
+    avatarImage
+  }
+}
+
